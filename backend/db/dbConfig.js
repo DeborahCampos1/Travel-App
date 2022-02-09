@@ -7,11 +7,10 @@ const db = pgPromise({
     database: process.env.PG_DATABASE,
     user: process.env.PG_USER,
 });
-//Troubleshooting - can run independently / in terminal
-// db.any("SELECT * FROM places;")
-// .then((data)=>{
-//     console.log(data)
-// })
+//Troubleshooting - can run independently / in terminal to test database directly
+// db.any("SELECT * FROM places;").then((data)=>console.log(data))
+// same folder as .env in this case /backend
+// node ./db/dbConfig.js 
 
 
 

@@ -1,10 +1,13 @@
 const express = require("express");
 const app = express();
+const placesController = require("./controllers/placesController.js");
 
 const cors = require("cors");
 
 app.use(cors());
 app.use(express.json());
+
+app.use("/places", placesController);
 
 app.get("/", (req,res)=>{
     res.send("<h1>Welcome to the Travel App</h1>")
